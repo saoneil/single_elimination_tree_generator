@@ -5,27 +5,34 @@ root = tk.Tk()
 root.title("Division Tree")
 
 
-match_counter = int(n/2)
-instance_counter = 0
-next_round_list = []
-round_counter = 0
 
-red_cur_name = ''
-red_cur_club = ''
-blue_cur_name = ''
-blue_cur_club = ''
-red_od1_name = ''
-red_od1_club = ''
-blue_od1_name = ''
-blue_od1_club = ''
-red_od2_name = ''
-red_od2_club = ''
-blue_od2_name = ''
-blue_od2_club = ''
-red_od3_name = ''
-red_od3_club = ''
-blue_od3_name = ''
-blue_od_club = ''
+
+
+title = tk.StringVar()
+pattern = "Optional Pattern"
+
+red_cur_name = tk.StringVar()
+red_cur_club = tk.StringVar()
+blue_cur_name = tk.StringVar()
+blue_cur_club = tk.StringVar()
+
+red_od1_name = tk.StringVar()
+red_od1_club = tk.StringVar()
+blue_od1_name = tk.StringVar()
+blue_od1_club = tk.StringVar()
+red_od2_name = tk.StringVar()
+red_od2_club = tk.StringVar()
+blue_od2_name = tk.StringVar()
+blue_od2_club = tk.StringVar()
+red_od3_name = tk.StringVar()
+red_od3_club = tk.StringVar()
+blue_od3_name = tk.StringVar()
+blue_od3_club = tk.StringVar()
+
+pattern_randomize = tk.Button(root, text="Generate Pattern")
+red_winner = tk.Button(root, text="Red Winner")
+blue_winner = tk.Button(root, text="Blue Winner")
+advance_tree = tk.Button(root, text="Advance Tree")
 
 
 

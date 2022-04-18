@@ -213,7 +213,7 @@ def get_division_list(filename):
     
     
     
-    return n, round_total, division_list, complete_tree_list, next_round_list
+    return n, round_total, division_list, complete_tree_list, next_round_list, filename
 
 # remove this before moving on
 # n, division_list, complete_tree_list, next_round_list = get_division_list("test_3.xlsx")

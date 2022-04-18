@@ -7,13 +7,14 @@ def get_xlsx_trees():
     file_list = os.listdir(r'C:\Users\saone\Documents\Python Stuff\prod\single_elimination_tree_generator\raw_divisions')
 
     for file in file_list:
-        n, round_total, division_list, complete_tree_list, next_round_list = get_division_list(file)
-        if file == "test_20.xlsx":
-            print(n)
-            print(round_total)
-            print(division_list)
-            print(next_round_list)
-            print(complete_tree_list)
+        n, round_total, division_list, complete_tree_list, next_round_list, file = get_division_list(file)
+        # if file == "test_20.xlsx":
+        #     print(n)
+        #     print(round_total)
+        #     print(division_list)
+        #     print(next_round_list)
+        #     print(complete_tree_list)
+        #     print(file)
         dot_index = file.index('.')
         file_name_adj = file[0:dot_index]
 
