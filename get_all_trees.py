@@ -7,7 +7,13 @@ def get_xlsx_trees():
     file_list = os.listdir(r'C:\Users\saone\Documents\Python Stuff\prod\single_elimination_tree_generator\raw_divisions')
 
     for file in file_list:
-        n, division_list, complete_tree_list, next_round_list = get_division_list(file)
+        n, round_total, division_list, complete_tree_list, next_round_list = get_division_list(file)
+        if file == "test_20.xlsx":
+            print(n)
+            print(round_total)
+            print(division_list)
+            print(next_round_list)
+            print(complete_tree_list)
         dot_index = file.index('.')
         file_name_adj = file[0:dot_index]
 
@@ -40,6 +46,14 @@ def get_xlsx_trees():
             sheet['C26'] = division_list[3][0]
             sheet['C27'] = division_list[3][1]
             
+            ## now enter the competitors who bye the first round
+            
+            sheet['G13'] = next_round_list[0][0]
+            sheet['G14'] = next_round_list[0][1]
+            
+            sheet['G23'] = next_round_list[1][0]
+            sheet['G24'] = next_round_list[1][1]
+            
             wb.save(filename = f"refined_divisions\\{file_name_adj}.xlsx") 
         elif n == 8:
             wb = openpyxl.load_workbook("templates\\8.xlsx")    
@@ -69,6 +83,20 @@ def get_xlsx_trees():
             
             sheet['B36'] = division_list[7][0]
             sheet['B37'] = division_list[7][1]
+            
+            ## now enter the competitors who bye the first round
+            
+            sheet['E10'] = next_round_list[0][0]
+            sheet['E11'] = next_round_list[0][1]
+            
+            sheet['E18'] = next_round_list[1][0]
+            sheet['E19'] = next_round_list[1][1]
+            
+            sheet['E26'] = next_round_list[2][0]
+            sheet['E27'] = next_round_list[2][1]
+            
+            sheet['E34'] = next_round_list[3][0]
+            sheet['E35'] = next_round_list[3][1]
             
             wb.save(filename = f"refined_divisions\\{file_name_adj}.xlsx") 
         elif n == 16:
@@ -123,6 +151,33 @@ def get_xlsx_trees():
             
             sheet['B63'] = division_list[15][0]
             sheet['B64'] = division_list[15][1]
+            
+            ## now enter the competitors who bye the first round
+            
+            sheet['E5'] = next_round_list[0][0]
+            sheet['E6'] = next_round_list[0][1]
+            
+            sheet['E13'] = next_round_list[1][0]
+            sheet['E14'] = next_round_list[1][1]
+            
+            sheet['E21'] = next_round_list[2][0]
+            sheet['E22'] = next_round_list[2][1]
+            
+            sheet['E29'] = next_round_list[3][0]
+            sheet['E30'] = next_round_list[3][1]
+            
+            sheet['E37'] = next_round_list[4][0]
+            sheet['E38'] = next_round_list[4][1]
+            
+            sheet['E45'] = next_round_list[5][0]
+            sheet['E46'] = next_round_list[5][1]
+            
+            sheet['E53'] = next_round_list[6][0]
+            sheet['E54'] = next_round_list[6][1]
+            
+            sheet['E61'] = next_round_list[7][0]
+            sheet['E62'] = next_round_list[7][1]
+            
             
             wb.save(filename = f"refined_divisions\\{file_name_adj}.xlsx") 
         elif n == 32:
@@ -227,5 +282,55 @@ def get_xlsx_trees():
             
             sheet['B127'] = division_list[31][0]
             sheet['B128'] = division_list[31][1]
+            
+            ## now enter the competitors who bye the first round
+            
+            sheet['E5'] = next_round_list[0][0]
+            sheet['E6'] = next_round_list[0][1]
+            
+            sheet['E13'] = next_round_list[1][0]
+            sheet['E14'] = next_round_list[1][1]
+            
+            sheet['E21'] = next_round_list[2][0]
+            sheet['E22'] = next_round_list[2][1]
+            
+            sheet['E29'] = next_round_list[3][0]
+            sheet['E30'] = next_round_list[3][1]
+            
+            sheet['E37'] = next_round_list[4][0]
+            sheet['E38'] = next_round_list[4][1]
+            
+            sheet['E45'] = next_round_list[5][0]
+            sheet['E46'] = next_round_list[5][1]
+            
+            sheet['E53'] = next_round_list[6][0]
+            sheet['E54'] = next_round_list[6][1]
+            
+            sheet['E61'] = next_round_list[7][0]
+            sheet['E62'] = next_round_list[7][1]
+            
+            sheet['E69'] = next_round_list[8][0]
+            sheet['E70'] = next_round_list[8][1]
+            
+            sheet['E77'] = next_round_list[9][0]
+            sheet['E78'] = next_round_list[9][1]
+            
+            sheet['E85'] = next_round_list[10][0]
+            sheet['E86'] = next_round_list[10][1]
+            
+            sheet['E93'] = next_round_list[11][0]
+            sheet['E94'] = next_round_list[11][1]
+            
+            sheet['E101'] = next_round_list[12][0]
+            sheet['E102'] = next_round_list[12][1]
+            
+            sheet['E109'] = next_round_list[13][0]
+            sheet['E110'] = next_round_list[13][1]
+            
+            sheet['E117'] = next_round_list[14][0]
+            sheet['E118'] = next_round_list[14][1]
+            
+            sheet['E125'] = next_round_list[15][0]
+            sheet['E126'] = next_round_list[15][1]
 
             wb.save(filename = f"refined_divisions\\{file_name_adj}.xlsx") 
