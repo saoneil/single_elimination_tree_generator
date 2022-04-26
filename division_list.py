@@ -124,6 +124,7 @@ def get_division_list(filename):
         division_list[1] = pre_org_list[1]
         
         complete_tree_list.append(division_list)
+        complete_tree_list.append(['']) 
     elif n == 4:
         division_list[0] = pre_org_list[0]
         division_list[3] = pre_org_list[1]
@@ -132,7 +133,8 @@ def get_division_list(filename):
         
         next_round_list = advance_byes(n, next_round_list)        
         complete_tree_list.append(division_list)
-        complete_tree_list.append('')      
+        complete_tree_list.append(['', ''])      
+        complete_tree_list.append([''])  
     elif n == 8:
         division_list[0] = pre_org_list[0]
         division_list[7] = pre_org_list[1]
@@ -145,8 +147,9 @@ def get_division_list(filename):
             
         next_round_list = advance_byes(n, next_round_list)        
         complete_tree_list.append(division_list)
-        complete_tree_list.append('')
-        complete_tree_list.append('')
+        complete_tree_list.append(['', '', '', ''])
+        complete_tree_list.append(['', ''])
+        complete_tree_list.append([''])  
     elif n == 16:
         division_list[0] = pre_org_list[0]
         division_list[15] = pre_org_list[1]
@@ -167,9 +170,10 @@ def get_division_list(filename):
         
         next_round_list = advance_byes(n, next_round_list)        
         complete_tree_list.append(division_list)
-        complete_tree_list.append('')
-        complete_tree_list.append('')
-        complete_tree_list.append('')
+        complete_tree_list.append(['', '', '', '', '', '', '', ''])
+        complete_tree_list.append(['', '', '', ''])
+        complete_tree_list.append(['', ''])
+        complete_tree_list.append(['']) 
     elif n == 32:
         division_list[0] = pre_org_list[0]
         division_list[31] = pre_org_list[1]
@@ -206,10 +210,11 @@ def get_division_list(filename):
         
         next_round_list = advance_byes(n, next_round_list)        
         complete_tree_list.append(division_list)
-        complete_tree_list.append('')
-        complete_tree_list.append('')
-        complete_tree_list.append('')
-        complete_tree_list.append('')
+        complete_tree_list.append(['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''])
+        complete_tree_list.append(['', '', '', '', '', '', '', ''])
+        complete_tree_list.append(['', '', '', ''])
+        complete_tree_list.append(['', ''])
+        complete_tree_list.append(['']) 
     
     
     
