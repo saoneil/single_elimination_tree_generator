@@ -37,8 +37,8 @@ def red_winner():
     winner = 0
     if n == 2:
         total_list[2] = [total_list[ins_cnt_2][0], total_list[ins_cnt_2][1]]
-        print(ins_cnt_4)
-        print(total_list)
+        print("ins_cnt_4: " + str(ins_cnt_4))
+        print("total list: " + str(total_list))
         ins_cnt_2 += 2
     elif n == 4:
         total_list[n+ins_cnt_4] = [total_list[ins_cnt_4][0], total_list[ins_cnt_4][1]]
@@ -81,6 +81,8 @@ def confirm_division_selection():
     
     cur_selection = file_selection.get()
     n, round_total, division_list, complete_tree_list, next_round_list, file = get_division_list(cur_selection)
+    
+    print("complete_tree_list: " + str(complete_tree_list))
     
     if n == 2:
         for i in range(n):
@@ -132,7 +134,7 @@ def confirm_division_selection():
     file_name_adj = file[0:dot_index]
     title.set(file_name_adj)
     
-    print(total_list)
+    print("total list: " + str(total_list))
     
     red_cur_name.set("")
     red_cur_club.set("")
@@ -282,7 +284,7 @@ confirm.pack()
 
 
 ##
-## TAB 1, advance tree
+## TAB 1, ADVANCING TREE
 ##
 title = tk.StringVar()
 title.set("Division: <Name>")
