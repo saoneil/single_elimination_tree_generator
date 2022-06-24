@@ -117,8 +117,7 @@ def get_division_list(filename):
                     next_round_list[14] = division_list[i+1]
                 elif i == 30:
                     next_round_list[15] = division_list[i+1]
-        return next_round_list
-        
+        return next_round_list    
     if n == 2:
         division_list[0] = pre_org_list[0]
         division_list[1] = pre_org_list[1]
