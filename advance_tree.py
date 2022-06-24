@@ -1,1 +1,0 @@
-# basic advancer logic for the gui
